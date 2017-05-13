@@ -6,8 +6,21 @@
   <title>Shared Web worker </title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-<body>
+<body><!-- EXAMPLE-01 SHARED WORKER
 	<pre id="log">Log:</pre>
-	<script type="text/javascript" src="src/js/main.js"></script>
+	<iframe src="src/html/inner.html"></iframe> -->
+
+	
+	<!-- EXAMPLE-02 SHARED WORKER
+
+	<p>
+		<button type=button onclick="openViewer()">Open a new viewer</button>
+	</p>
+  	<p>Each viewer opens in a new window. You can have as many viewers as you like, they all view the same data.</p>
+	<script type="text/javascript">
+	function openViewer() {
+	    window.open('src/html/inner.html');
+	}
+	</script> -->
 </body>
 </html>
