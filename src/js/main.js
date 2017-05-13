@@ -1,28 +1,8 @@
+var worker = new SharedWorker('src/js/sharedWorker.js');
 
+worker.port.addEventListener("message", function(e) {
+	var log = document.getElementById('log');
+	log.textContent += '\n' + e.data;
+});
 
-
-//Ticker
-var symbol = "GOOG"; //default symbol to be search
-var ticker = new Worker('ticker.js');
-
-var select = function (newSymbol){
-	ticker.postMessage(newSymbol);
-}
-
-//Searcher
-var searcher = new Worker('searcher.js');
-
-var search = function(query){
-	searcher.postMessage(query);
-}
-
-
-
-
-
-
-
-
-document.getElementById('dataToBeSearch').addEventListener("input", function(){
-	search(this.value);
-},false);
+worker.port.start();
