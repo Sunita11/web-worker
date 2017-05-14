@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="Refresh" content="120; URL=../">
+  <title>Shared Web worker </title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<p>
+		<button type=button onclick="openViewer()">Open a new viewer</button>
+	</p>
+  	<p>Each viewer opens in a new window. You can have as many viewers as you like, they all view the same data.</p>
+	<script type="text/javascript">
+	function openViewer() {
+	    window.open('src/html/inner-example-02.html');
+	}
+	</script> 
+</body>
+</html>

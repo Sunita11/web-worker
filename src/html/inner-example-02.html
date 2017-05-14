@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title>Workers example: Multiviewer viewer</title>
+ </head>
+ <body>
+  <h1>Viewer</h1>
+  <h2>Map</h2>
+  <p><canvas id="map" height=150 width=150></canvas></p>
+  <p>
+    <button type=button onclick="worker.port.postMessage('mov left')">Left</button>
+    <button type=button onclick="worker.port.postMessage('mov up')">Up</button>
+    <button type=button onclick="worker.port.postMessage('mov down')">Down</button>
+    <button type=button onclick="worker.port.postMessage('mov right')">Right</button>
+    <button type=button onclick="worker.port.postMessage('set 0')">Set 0</button>
+    <button type=button onclick="worker.port.postMessage('set 1')">Set 1</button>
+  </p>
+  <h2>Public Chat</h2>
+  <div id="public"></div>
+  <form onsubmit="worker.port.postMessage('txt ' + message.value); message.value = ''; return false;">
+   <p>
+    <input type="text" name="message" size="50">
+    <button>Post</button>
+   </p>
+  </form>
+  <h2>Private Chat</h2>
+  <ul id="private"></ul>
+
+  <script type="text/javascript" src="../js/main-example-02.js"></script>
+ </body>
+</html>

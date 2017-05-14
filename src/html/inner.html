@@ -1,6 +1,4 @@
-<!-- EXAMPLE-01 SHARED WORKER
-
- <!doctype html>
+<!doctype html>
 <html lang="en" ng-app="myApp">
 <head>
   <meta charset="UTF-8">
@@ -11,35 +9,4 @@
 	<pre id="log"> Inner Log:</pre>
 	<script type="text/javascript" src="../js/main.js"></script>
 </body>
-</html> -->
-
-
-<!-- EXAMPLE-02 SHARED WORKER 
-
-<!DOCTYPE HTML>
-<html>
- <head>
-  <title>Workers example: Multiviewer viewer</title>
- </head>
- <body>
-  <h1>Viewer</h1>
-  <h2>Map</h2>
-  <p><canvas id="map" height=150 width=150></canvas></p>
-  <p>
-   <button type=button onclick="worker.port.postMessage('set 0')">Set 0</button>
-   <button type=button onclick="worker.port.postMessage('set 1')">Set 1</button>
-  </p>
-  <h2>Public Chat</h2>
-  <div id="public"></div>
-  <form onsubmit="worker.port.postMessage('txt ' + message.value); message.value = ''; return false;">
-   <p>
-    <input type="text" name="message" size="50">
-    <button>Post</button>
-   </p>
-  </form>
-  <h2>Private Chat</h2>
-  <ul id="private"></ul>
-
-  <script type="text/javascript" src="../js/main.js"></script>
- </body>
-</html> -->
+</html>
