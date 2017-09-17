@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="Refresh" content="120; URL=../">
+  <title>Shared Web worker </title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<p id="message"></p>
+	<div id="content">
+		<div id="pageResults"></div>
+		<form onSubmit="startSearch(); return false;">
+			<p>Start from 
+				<input type="text" value="1" style="width:50px;" id="startingInteger" name="startingInteger" />
+			</p>
+			<button type="button" id="startStopButton" onClick="startSearch()">Find First Prime</button>
+		</form>
+		<p>
+			The First Prime &gt;
+			<output id="primeStart" style="background-color: #667; color: #fff; padding: 2px 3px; border: 1px solid black;">_</output>is
+			<output id="primeResult" style="background-color: #667; color: #fff; padding: 2px 3px; border: 1px solid black;">_</output>.
+		</p>
+	</div>
+	<script  type="text/javascript" src="src/js/main-example-03.js"></script>
+</body>
+</html>
